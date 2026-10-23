@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EUA 2026 · Nova York & Orlando</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-400 selection:text-slate-900">
+
+  <!-- HERO HEADER -->
+  <header class="relative min-h-[85vh] flex flex-col justify-between overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="dia 1.jpg" 
+           alt="Manhattan Skyline" 
+           class="w-full h-full object-cover object-center brightness-[0.45] scale-105 transition-transform duration-1000">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+    </div>
+
+    <!-- Top Badge -->
+    <div class="relative z-10 max-w-5xl mx-auto w-full pt-10 px-5 flex justify-between items-center">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 backdrop-blur-md border border-slate-700/60 text-xs font-semibold tracking-wide text-amber-300 shadow-sm">
+        ✈️ ROTEIRO CONFIRMADO · 2 VIAJANTES
+      </span>
+      <span class="text-xs font-medium text-slate-100 bg-slate-800/60 px-3 py-1 rounded-full border border-slate-700/40 shadow-sm">
+        30/11 → 16/12/2026
+      </span>
+    </div>
+
+    <!-- Countdown -->
+    <div class="relative z-10 max-w-5xl mx-auto w-full px-5 pt-8">
+      <div id="countdown" class="inline-flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-slate-900/80 backdrop-blur-md border border-amber-400/40 rounded-2xl px-5 py-4 shadow-xl shadow-black/20" role="timer">
+        <div class="flex flex-col">
+          <span class="text-[11px] uppercase tracking-widest font-bold text-amber-300">Contagem para o embarque</span>
+          <span class="text-xs text-slate-300">GIG → JFK · 30/11 às 23:00</span>
+        </div>
+        <div id="countdown-units" class="flex items-center gap-2 sm:gap-3">
+          <div class="flex flex-col items-center min-w-[3.5rem] bg-slate-800 border border-slate-700 rounded-xl px-2 py-2">
+            <span data-unit="days" class="text-2xl sm:text-3xl font-extrabold text-white tabular-nums leading-none">--</span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Dias</span>
+          </div>
+          <div class="flex flex-col items-center min-w-[3.5rem] bg-slate-800 border border-slate-700 rounded-xl px-2 py-2">
+            <span data-unit="hours" class="text-2xl sm:text-3xl font-extrabold text-white tabular-nums leading-none">--</span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Horas</span>
+          </div>
+          <div class="flex flex-col items-center min-w-[3.5rem] bg-slate-800 border border-slate-700 rounded-xl px-2 py-2">
+            <span data-unit="minutes" class="text-2xl sm:text-3xl font-extrabold text-white tabular-nums leading-none">--</span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Min</span>
+          </div>
+          <div class="flex flex-col items-center min-w-[3.5rem] bg-slate-800 border border-slate-700 rounded-xl px-2 py-2">
+            <span data-unit="seconds" class="text-2xl sm:text-3xl font-extrabold text-amber-400 tabular-nums leading-none">--</span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Seg</span>
+          </div>
+        </div>
+        <p id="countdown-done" class="hidden text-lg font-bold text-amber-300">A viagem começou! Boa viagem ✈️</p>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var target = new Date('2026-11-30T23:00:00-03:00').getTime();
+        var root = document.getElementById('countdown');
+        var units = document.getElementById('countdown-units');
+        var done = document.getElementById('countdown-done');
+        var el = {};
+        ['days', 'hours', 'minutes', 'seconds'].forEach(function (k) { el[k] = root.querySelector('[data-unit="' + k + '"]'); });
+        var pad = function (n) { return String(n).padStart(2, '0'); };
+        var timer;
+        function tick() {
+          var diff = target - Date.now();
+          if (diff <= 0) { units.classList.add('hidden'); done.classList.remove('hidden'); clearInterval(timer); return; }
+          var s = Math.floor(diff / 1000);
+          el.days.textContent = Math.floor(s / 86400); el.hours.textContent = pad(Math.floor((s % 86400) / 3600));
+          el.minutes.textContent = pad(Math.floor((s % 3600) / 60)); el.seconds.textContent = pad(s % 60);
+        }
+        tick(); timer = setInterval(tick, 1000);
+      })();
+    </script>
+
+    <!-- Main Title & Key Stats -->
+    <div class="relative z-10 max-w-5xl mx-auto w-full px-5 py-12">
+      <p class="text-slate-200 text-sm md:text-base font-medium mb-2 tracking-wider uppercase">Fim de Ano dos Sonhos · Marcelo & Valentina</p>
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-4">
+        NYC & Orlando <span class="text-amber-400 block sm:inline">2026</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-200 font-medium flex flex-wrap items-center gap-2 mb-8">
+        <span>🗽 Manhattan & Natal</span>
+        <span class="text-slate-400">→</span>
+        <span>🏰 Magia Disney</span>
+        <span class="text-slate-400">→</span>
+        <span>🛍️ Enxoval & Outlets</span>
+        <span class="text-slate-400">→</span>
+        <span>⚡ Epic Universe</span>
+      </p>
+
+      <!-- Key Numbers Card Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl">
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
+          <span class="text-2xl sm:text-3xl font-bold text-white block">16</span>
+          <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold">Dias de Viagem</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
+          <span class="text-2xl sm:text-3xl font-bold text-amber-400 block">3</span>
+          <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold">Voos Emitidos</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
+          <span class="text-2xl sm:text-3xl font-bold text-sky-300 block">7</span>
+          <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold">Parques Temáticos</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
+          <span class="text-2xl sm:text-3xl font-bold text-emerald-400 block">2</span>
+          <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold">Dias de Compras</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar Sticky -->
+    <nav class="relative z-20 sticky top-0 bg-white/90 backdrop-blur-lg border-y border-slate-200 px-4 py-3 shadow-sm">
+      <div class="max-w-5xl mx-auto flex items-center justify-between gap-4 overflow-x-auto no-scrollbar text-sm font-semibold">
+        <div class="flex items-center gap-1 sm:gap-2">
+          <a href="#voos" class="px-3 py-1.5 rounded-lg text-slate-700 hover:bg-slate-100 transition">Voos</a>
+          <a href="#bases" class="px-3 py-1.5 rounded-lg text-slate-700 hover:bg-slate-100 transition">Bases</a>
+          <a href="#dia-a-dia" class="px-3 py-1.5 rounded-lg text-sky-700 bg-sky-50 border border-sky-100 hover:bg-sky-100 transition">Roteiro Completo</a>
+          <a href="#outlets" class="px-3 py-1.5 rounded-lg text-slate-700 hover:bg-slate-100 transition">Outlets</a>
+          <a href="#transporte" class="px-3 py-1.5 rounded-lg text-slate-700 hover:bg-slate-100 transition">Logística</a>
+          <a href="#despesas" class="px-3 py-1.5 rounded-lg text-slate-700 hover:bg-slate-100 transition">Despesas</a>
+        </div>
+        <a href="#checklist" class="hidden sm:inline-flex items-center gap-1 px-3.5 py-1.5 rounded-lg bg-amber-400 text-slate-900 font-bold hover:bg-amber-300 transition text-xs whitespace-nowrap">
+          ✓ Checklist
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-12 space-y-20">
+
+    <!-- SEÇÃO: CARTÕES DE EMBARQUE / VOOS CONFIRMADOS -->
+    <section id="voos" class="pt-2">
+      <div class="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <p class="text-amber-500 text-xs font-bold tracking-widest uppercase">Bilhetes & Cartões de Embarque</p>
+          <h2 class="text-3xl font-extrabold text-slate-900">Voos Emitidos</h2>
+          <p class="text-slate-600 text-sm mt-1">Passageiros: <strong>Marcelo Bittencourt Ramos Pinto</strong> & <strong>Valentina Solak</strong></p>
+        </div>
+        <span class="inline-flex items-center gap-1 text-xs text-emerald-700 bg-emerald-100 border border-emerald-200 px-3 py-1.5 rounded-full font-semibold">
+          ✓ Todos os trechos confirmados
+        </span>
+      </div>
+
+      <div class="space-y-6">
+        <!-- VOO 1 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="bg-slate-50 px-6 py-4 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-1 rounded bg-sky-100 text-sky-700 border border-sky-200 text-xs font-bold uppercase">Ida Internacional</span>
+              <span class="text-sm font-semibold text-slate-800">GOL G3 6000 (Op. American Airlines) · Boeing 787-8</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs">
+              <span class="text-slate-500">Loc. GOL:</span> <strong class="text-amber-600 font-mono text-sm bg-amber-50 px-2 py-0.5 rounded border border-amber-200">MHSDCT</strong>
+              <span class="text-slate-500 ml-2">Loc. AA:</span> <strong class="text-amber-600 font-mono text-sm bg-amber-50 px-2 py-0.5 rounded border border-amber-200">MGEOUF</strong>
+            </div>
+          </div>
+          <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div>
+              <div class="text-xs text-slate-500 uppercase font-semibold">Origem · Terminal 2</div>
+              <div class="text-3xl font-black text-slate-900 mt-1">GIG</div>
+              <div class="text-sm text-slate-600">Rio de Janeiro (Galeão)</div>
+              <div class="text-xs font-bold text-amber-600 mt-1">Seg, 30/11/2026 às 23:00</div>
+            </div>
+            <div class="flex flex-col items-center justify-center text-center py-2 md:py-0 border-y md:border-y-0 md:border-x border-slate-100 px-4">
+              <span class="text-xs text-slate-500 font-medium">Voo Direto · 10h 10min</span>
+              <div class="w-full flex items-center gap-2 my-2">
+                <div class="h-0.5 flex-1 bg-slate-200"></div>
+                <span class="text-sky-500 text-sm">✈</span>
+                <div class="h-0.5 flex-1 bg-slate-200"></div>
+              </div>
+              <span class="text-[11px] text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200">Tarifa Light · Cabine Econômica (A)</span>
+            </div>
+            <div class="md:text-right">
+              <div class="text-xs text-slate-500 uppercase font-semibold">Destino · Terminal 8</div>
+              <div class="text-3xl font-black text-slate-900 mt-1">JFK</div>
+              <div class="text-sm text-slate-600">Nova York (John F. Kennedy)</div>
+              <div class="text-xs font-bold text-emerald-600 mt-1">Ter, 01/12/2026 às 07:10</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VOO 2 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="bg-slate-50 px-6 py-4 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-1 rounded bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-bold uppercase">Trecho Interno</span>
+              <span class="text-sm font-semibold text-slate-800">American Airlines · Voo AA 3123</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs">
+              <span class="text-slate-500">Loc. AA:</span> <strong class="text-amber-600 font-mono text-sm bg-amber-50 px-2 py-0.5 rounded border border-amber-200">MNLKYP</strong>
+            </div>
+          </div>
+          <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div>
+              <div class="text-xs text-slate-500 uppercase font-semibold">Origem · Balcão AA às 12:47</div>
+              <div class="text-3xl font-black text-slate-900 mt-1">LGA</div>
+              <div class="text-sm text-slate-600">Nova York (LaGuardia)</div>
+              <div class="text-xs font-bold text-amber-600 mt-1">Sáb, 05/12/2026 às 15:47</div>
+            </div>
+            <div class="flex flex-col items-center justify-center text-center py-2 md:py-0 border-y md:border-y-0 md:border-x border-slate-100 px-4">
+              <span class="text-xs text-slate-500 font-medium">Voo Direto · 3h 07min</span>
+              <div class="w-full flex items-center gap-2 my-2">
+                <div class="h-0.5 flex-1 bg-slate-200"></div>
+                <span class="text-indigo-500 text-sm">✈</span>
+                <div class="h-0.5 flex-1 bg-slate-200"></div>
+              </div>
+              <span class="text-[11px] text-amber-700 bg-amber-100 px-2 py-0.5 rounded border border-amber-200">Classe B/B · Sem mala despachada (Básica)</span>
+            </div>
+            <div class="md:text-right">
+              <div class="text-xs text-slate-500 uppercase font-semibold">Destino</div>
+              <div class="text-3xl font-black text-slate-900 mt-1">MCO</div>
+              <div class="text-sm text-slate-600">Orlando International Airport</div>
+              <div class="text-xs font-bold text-emerald-600 mt-1">Sáb, 05/12/2026 às 18:54</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VOO 3 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="bg-slate-50 px-6 py-4 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-1 rounded bg-rose-100 text-rose-700 border border-rose-200 text-xs font-bold uppercase">Volta Internacional</span>
+              <span class="text-sm font-semibold text-slate-800">AraJet · Voo DM 5221</span>
+            </div>
+          </div>
+          <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div>
+              <div class="text-xs text-slate-500 uppercase font-semibold">Origem (Orlando Sanford)</div>
+              <div class="text-3xl font-black text-slate-900 mt-1">SFB</div>
+              <div class="text-sm text-slate-600">Orlando Sanford Intl.</div>
+              <div class="text-xs font-bold text-amber-600 mt-1">Ter, 15/12/2026 às 12:55</div>
+            </div>
+            <div class="flex flex-col items-center justify-center text-center py-2 md:py-0 border-y md:border-y-0 md:border-x border-slate-100 px-4">
+              <span class="text-xs text-slate-500 font-medium">Conexão em PUJ (Punta Cana)</span>
+              <div class="w-full flex items-center gap-2 my-2">
+                <div class="h-0.5 flex-1 bg-slate-200"></div>
+                <span class="text-xs text-amber-600 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Escala 1h 49m</span>
+                <div class="h-0.5 flex-1 bg-slate-200"></div>
+              </div>
+            </div>
+            <div class="md:text-right">
+              <div class="text-xs text-slate-500 uppercase font-semibold">Destino Final</div>
+              <div class="text-3xl font-black text-slate-900 mt-1">GRU</div>
+              <div class="text-sm text-slate-600">Guarulhos Terminal Intl.</div>
+              <div class="text-xs font-bold text-emerald-600 mt-1">Qua, 16/12/2026 às 02:42 (+1)</div>
+            </div>
+          </div>
+          <div class="bg-slate-50 px-6 py-4 border-t border-slate-200 text-xs text-slate-600">
+            <strong>Bagagem Inclusa (Por Pessoa):</strong> 1 Item pessoal (10 kg), 1 Bagagem de mão (12 kg) e 1 Bagagem despachada (23 kg).
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO: BASES -->
+    <section id="bases" class="pt-2">
+      <div class="mb-6">
+        <p class="text-sky-600 text-xs font-bold tracking-widest uppercase">Hospedagens e Regiões</p>
+        <h2 class="text-3xl font-extrabold text-slate-900">Bases da Viagem</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1: NYC -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-slate-500 font-semibold mb-1">01/12 a 05/12</div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">🗽 Nesva Hotel (NYC)</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                Base em Long Island City, pertinho da estação <span class="font-bold text-slate-800">39 Av-Dutch Kills</span> (linhas N/W). Acesso rápido a Manhattan.
+              </p>
+            </div>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-100 border border-emerald-200 px-2 py-1 rounded w-fit">Pago: R$ 3.467,13</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Disney Springs -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-slate-500 font-semibold mb-1">05/12 a 10/12</div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">🏰 Wyndham Disney Springs</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                Ao lado de Disney Springs, com a locadora Budget no hotel em frente. Ônibus gratuito para os parques Disney.
+              </p>
+            </div>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-100 border border-emerald-200 px-2 py-1 rounded w-fit">Pago: R$ 3.833,00</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Universal Area -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-slate-500 font-semibold mb-1">10/12 a 15/12</div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">⚡ Wingate Universal Studios</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                Base estratégica para os dias de Outlets (roteiro Sul e Norte), e imersão total nos parques da Universal.
+              </p>
+            </div>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-100 border border-emerald-200 px-2 py-1 rounded w-fit">Pago: R$ 2.824,00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: ROTEIRO UNIFICADO DIA A DIA -->
+    <section id="dia-a-dia">
+      <div class="mb-8">
+        <p class="text-sky-600 text-xs font-bold tracking-widest uppercase">Cronograma Completo</p>
+        <h2 class="text-3xl font-extrabold text-slate-900">Roteiro Dia a Dia</h2>
+        <p class="text-slate-600 text-sm mt-1">O itinerário passo a passo integrando voos, atrações detalhadas e hospedagem.</p>
+      </div>
+
+      <div class="space-y-8 relative">
+        <div class="absolute left-6 top-10 bottom-10 w-0.5 bg-slate-200 hidden md:block"></div>
+
+        <!-- DIA 0: VOO IDA -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-sky-100 text-sky-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Seg</span>
+              <span class="text-lg leading-none">30</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+            <span class="text-xs font-bold text-sky-700 bg-sky-100 border border-sky-200 px-2 py-1 rounded mb-2 inline-block">Voo Internacional</span>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Galeão (GIG) → Nova York (JFK)</h3>
+            <p class="text-sm text-slate-600"><strong>23:00</strong> - Voo G3 6000 (AA Boeing 787-8). Terminal 2 do Galeão. PNR: MHSDCT / MGEOUF.</p>
+          </div>
+        </div>
+
+        <!-- DIA 1: NYC -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Ter</span>
+              <span class="text-lg leading-none">01</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 1.jpg" alt="Dia 1" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <span class="md:hidden text-xs font-bold text-slate-500 mb-1 block">Terça, 01/12</span>
+                  <h3 class="text-xl font-bold text-slate-900">NYC Dia 1 · 5ª Avenida & Summit</h3>
+                </div>
+              </div>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li><strong>07:10:</strong> Chegada JFK. Deixar malas no hotel Nesva.</li>
+                <li><strong>Manhã:</strong> Metrô 5 Av/53 St. Passear pela Quinta Avenida, St. Patrick's Cathedral, Rockefeller Center, Biblioteca Pública e Bryant Park.</li>
+                <li><strong>Tarde:</strong> Grand Central Station (Galeria dos Sussurros) e ver o Chrysler Building.</li>
+                <li><span class="text-amber-600 font-bold">15:00:</span> Subir no SUMMIT One Vanderbilt (ingresso pago).</li>
+                <li><strong>Noite:</strong> Times Square. Subir no rooftop gratuito do M Social Hotel.</li>
+                <li><strong>Clima de Natal:</strong> Árvore do Rockefeller e Show de Luzes na fachada da Saks (a cada 10 min).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 2: NYC -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Qua</span>
+              <span class="text-lg leading-none">02</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 2.jpg" alt="Dia 2" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">NYC Dia 2 · Central Park & Museus</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li><strong>Café:</strong> Clássico Sarabeth's.</li>
+                <li><span class="text-sky-600 font-bold">10:00:</span> Museu de História Natural (ingresso pago).</li>
+                <li><strong>Almoço:</strong> Rápido no Gray's Papaya (hot dog).</li>
+                <li><strong>Central Park:</strong> Prédio Dakota, Mosaico Imagine (Strawberry Fields), Bow Bridge, Bethesda Terrace e The Mall. Gapstow Bridge (se sobrar tempo).</li>
+                <li><strong>Upper East Side:</strong> Café da Ralph Lauren, caminhar entre as ruas 70th, 71st e 73rd para ver as mansões históricas. Loja FIGS (scrubs).</li>
+                <li><strong>Jantar:</strong> Ver fachada do MET e comer no tradicional Pastrami Queen.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 3: NYC -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Qui</span>
+              <span class="text-lg leading-none">03</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 3.jpg" alt="Dia 3" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">NYC Dia 3 · Downtown & Brooklyn</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li><strong>Estátua da Liberdade:</strong> Balsa gratuita de Staten Island (sentar à direita na ida, esquerda na volta).</li>
+                <li><strong>Distrito Financeiro:</strong> Stone Street, Touro de Wall Street, Bolsa de Valores e Federal Hall.</li>
+                <li><strong>WTC:</strong> Memorial 9/11 e The Oculus. Passar no City Hall.</li>
+                <li><strong>Travessia:</strong> Caminhar pela icônica Ponte do Brooklyn.</li>
+                <li><strong>DUMBO:</strong> Fotos clássicas e prainha de Pebble Beach.</li>
+                <li><strong>Jantar:</strong> Time Out Market (subir no terraço gratuito) ou Brooklyn Heights Promenade.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 4: NYC -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Sex</span>
+              <span class="text-lg leading-none">04</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 4.jpg" alt="Dia 4" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">NYC Dia 4 · High Line, Village & SoHo</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li><strong>Café:</strong> The Bakery at Greywind (escolha da Valen) ou Russ & Daughter.</li>
+                <li><strong>Manhã:</strong> Vessel, caminhada pelo High Line Park, Pier 57 (rooftop público) e Little Island.</li>
+                <li><strong>Almoço:</strong> Chelsea Market e Starbucks Reserve Roastery.</li>
+                <li><strong>Villages:</strong> Fachada do prédio de Friends e Washington Square Park.</li>
+                <li><strong>SoHo:</strong> Ruas Greene, Prince e Spring. Comer o famoso cronut na Dominique Ansel Bakery.</li>
+                <li><strong>Noite:</strong> Cannoli no Ferrara (1892) em Little Italy e jantar em Chinatown (Doyers/Mott St).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 5: VOO INTERNO -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Sáb</span>
+              <span class="text-lg leading-none">05</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 5.jpg" alt="Dia 5" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <span class="text-xs font-bold text-indigo-700 bg-indigo-100 border border-indigo-200 px-2 py-1 rounded mb-2 inline-block">Deslocamento para Orlando</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Manhã em NY e Voo AA 3123</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li>Café na Union Square Greenmarket ou Flat Iron Building.</li>
+                <li>Ir pro Aeroporto LaGuardia (LGA) às 12:30.</li>
+                <li><strong>15:47:</strong> Voo para Orlando MCO (chega 18:54). Loc: MNLKYP.</li>
+                <li>Check-in no hotel Wyndham Disney Springs.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 6: EPCOT -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Dom</span>
+              <span class="text-lg leading-none">06</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 6.jpg" alt="EPCOT" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Disney · EPCOT</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li>Começar pelo Ratatouille ou Guardians of the Galaxy.</li>
+                <li><span class="text-indigo-600 font-bold">12:50:</span> Almoço com reserva no Space 220.</li>
+                <li><strong>World Discovery:</strong> Mission Space e Test Track.</li>
+                <li><strong>World Nature:</strong> Soarin, Moana e Living with the Land.</li>
+                <li><strong>Pavilhões:</strong> Gran Fiesta Tour (México), Frozen Ever After (Noruega).</li>
+                <li><strong>Noite:</strong> Show de fogos Luminous.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 7: MAGIC KINGDOM -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Seg</span>
+              <span class="text-lg leading-none">07</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 7.jpg" alt="Magic Kingdom" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Disney · Magic Kingdom</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li>Early entry (30 min antes): Começar por Seven Dwarfs ou Space Mountain.</li>
+                <li><strong>14:00:</strong> Festival of Fantasy Parade.</li>
+                <li><strong>Imperdíveis:</strong> TRON Lightcycle / Run, Big Thunder, Haunted Mansion, Pirates of the Caribbean e Peter Pan.</li>
+                <li><strong>Noite:</strong> Fogos Happily Ever After no Castelo.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 8: ANIMAL KINGDOM -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Ter</span>
+              <span class="text-lg leading-none">08</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 8.jpg" alt="Animal Kingdom" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Disney · Animal Kingdom</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li>Ir direto para Pandora: Avatar Flight of Passage e Na'vi River. (Voltar lá a noite!)</li>
+                <li><strong>África:</strong> Kilimanjaro Safaris (ir de manhã!), Show do Rei Leão, Gorilla Falls.</li>
+                <li><strong>Ásia:</strong> Expedition Everest, Trilha Maharajah.</li>
+                <li><strong>Shows:</strong> Zootopia (na árvore da vida).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 9: HOLLYWOOD STUDIOS -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Qua</span>
+              <span class="text-lg leading-none">09</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 9.jpg" alt="Hollywood Studios" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Disney · Hollywood Studios</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li>Começar por Star Wars (Rise of the Resistance) e Toy Story Land.</li>
+                <li><span class="text-indigo-600 font-bold">11:00:</span> Drink na Oga Cantina.</li>
+                <li><span class="text-indigo-600 font-bold">13:25:</span> Almoço no Roundup Rodeo BBQ.</li>
+                <li><strong>Atrações:</strong> Tower of Terror, Rock 'n' Roller Coaster, Mickey & Minnie's Runaway Railway.</li>
+                <li><strong>Noite:</strong> Show Fantasmic.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 10: COMPRAS 1 E MVMCP -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Qui</span>
+              <span class="text-lg leading-none">10</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 10.jpg" alt="Outlets Orlando" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-100 border border-emerald-200 px-2 py-1 rounded mb-2 inline-block">Compras + Festa de Natal + Troca de Hotel</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Dia 10 · Outlets Sul & MVMCP</h3>
+              <ul class="text-sm space-y-2 text-slate-700 mb-3">
+                <li>Retirar o carro na Budget logo cedo. Fazer check-out e colocar malas no carro.</li>
+                <li><strong>Manhã:</strong> Ross, Marshalls, Burlington. Comprar a mala nova para o enxoval!</li>
+                <li><strong>The Loop:</strong> Nike Clearance. / <strong>Best Buy Ocoee:</strong> Procurar MacBook. / <strong>Vineland:</strong> Marcas premium.</li>
+                <li>Check-in no hotel Wingate (Universal).</li>
+                <li><span class="text-rose-600 font-bold">Noite:</span> Mickey's Very Merry Christmas Party no Magic Kingdom (ingresso pago).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 11: COMPRAS 2 -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Sex</span>
+              <span class="text-lg leading-none">11</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 11.jpg" alt="Compras Orlando" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Dia 11 · Outlets Norte & Enxoval</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li><strong>Manhã:</strong> TJ Maxx para garimpo.</li>
+                <li><strong>Outlet Marketplace (Clearance):</strong> Adidas, Calvin Klein, Under Armour, Carter's (Enxoval do bebê!).</li>
+                <li><strong>International Premium Outlets:</strong> Columbia, North Face, Michael Kors, Gap.</li>
+                <li>Devolver o carro no aeroporto/hotel no fim do dia.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 12: EPIC UNIVERSE -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-rose-100 text-rose-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Sáb</span>
+              <span class="text-lg leading-none">12</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 12.jpg" alt="Epic Universe" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Universal · Epic Universe (Novo)</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li>Começar por Dark Universe (Monsters Unchained) ou How to Train Your Dragon (evitar a fila insana de Harry Potter na entrada).</li>
+                <li><strong>Celestial Park:</strong> Stardust Racer (montanha-russa radical).</li>
+                <li><strong>Nintendo:</strong> Mine-Cart Madness e Mario Kart.</li>
+                <li><strong>Harry Potter:</strong> Battle at the Ministry (melhor do parque!).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 13: UNIVERSAL STUDIOS -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-rose-100 text-rose-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Dom</span>
+              <span class="text-lg leading-none">13</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 13.jpg" alt="Universal Studios" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Universal Studios Florida</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li>Ignorar os minions na entrada, ir direto para Múmia (Revenge of the Mummy) e Transformers.</li>
+                <li><strong>Harry Potter (Diagon Alley):</strong> Escape from Gringotts, Varinhas do Olivaras.</li>
+                <li><strong>Outros:</strong> Men in Black, Simpsons, The Bourne Stuntacular.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 14: ISLANDS OF ADVENTURE -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4 hidden md:flex">
+            <div class="w-12 h-12 rounded-full bg-rose-100 text-rose-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Seg</span>
+              <span class="text-lg leading-none">14</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 14.jpg" alt="Islands of Adventure" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Universal's Islands of Adventure</h3>
+              <ul class="text-sm space-y-2 text-slate-700">
+                <li>Decidir a estratégia: Começar na VelociCoaster / Hagrid's (muito cheias de manhã) ou ir contra o fluxo (Marvel / Skull Island primeiro).</li>
+                <li><strong>Hogsmeade:</strong> Harry Potter and the Forbidden Journey. Hogwarts Always (show noturno).</li>
+                <li><strong>Marvel:</strong> Hulk Coaster, Spider-Man.</li>
+                <li><strong>Outros:</strong> King Kong e atrações de água.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 15/16: RETORNO -->
+        <div class="flex flex-col md:flex-row gap-6 relative">
+          <div class="md:w-16 flex justify-center mt-4">
+            <div class="w-12 h-12 rounded-full bg-slate-200 text-slate-700 flex flex-col items-center justify-center font-bold border-4 border-white shadow-sm z-10 relative">
+              <span class="text-[10px] leading-none uppercase">Ter</span>
+              <span class="text-lg leading-none">15</span>
+            </div>
+          </div>
+          <div class="flex-1 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 h-48 md:h-auto bg-slate-200">
+              <!-- IMAGEM DIRETO DA PASTA DO GITHUB -->
+              <img src="dia 15.jpg" alt="Retorno" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Sanford (SFB) ➔ Guarulhos (GRU)</h3>
+              <p class="text-sm text-slate-600"><strong>12:55</strong> - Voo de volta pela AraJet (DM 5221) com escala em Punta Cana. Chegada no Brasil de madrugada, no dia 16.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: GUIA ESTRATÉGICO DE OUTLETS ORLANDO -->
+    <section id="outlets" class="pt-6">
+      <div class="mb-8">
+        <p class="text-amber-500 text-xs font-bold tracking-widest uppercase">Orlando Shopping Bible</p>
+        <h2 class="text-3xl font-extrabold text-slate-900">Guia Estratégico de Outlets & Clearance</h2>
+        <p class="text-slate-600 text-sm mt-1">Metodologia para maximizar descontos, cupons VIP e clearance ponta de estoque.</p>
+      </div>
+
+      <!-- Estratégia dos Cupons -->
+      <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200 mb-8 space-y-4">
+        <h3 class="text-xl font-bold text-amber-700 flex items-center gap-2">
+          🎯 Regra de Ouro: Cadastro Prévio & Perguntas no Caixa
+        </h3>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          Cadastre-se nos sites americanos (<span class="font-bold">.com ou .us</span>) 2 a 3 dias antes da viagem para garantir os cupons de 10% a 20% válidos. Nunca use .com.br! No caixa de cada loja, faça sempre as 3 perguntas:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mt-4">
+          <div class="bg-white p-3.5 rounded-xl border border-amber-200 shadow-sm">
+            <span class="text-amber-700 font-bold block mb-1">1. Programa de Fidelidade</span>
+            <p class="text-slate-600">"Is there any rewards program or email sign-up that gives an extra discount today?"</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-xl border border-amber-200 shadow-sm">
+            <span class="text-amber-700 font-bold block mb-1">2. Cupom de Loja</span>
+            <p class="text-slate-600">"Do you have any in-store coupon or promo today?"</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-xl border border-amber-200 shadow-sm">
+            <span class="text-amber-700 font-bold block mb-1">3. Melhor Desconto</span>
+            <p class="text-slate-600">"Could you check which one gives me the best discount, please?"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: DESPESAS E CÁLCULOS AUTOMÁTICOS -->
+    <section id="despesas" class="pt-6">
+      <div class="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <p class="text-emerald-600 text-xs font-bold tracking-widest uppercase">Orçamento da Viagem</p>
+          <h2 class="text-3xl font-extrabold text-slate-900">Calculadora de Despesas</h2>
+          <p class="text-slate-600 text-sm mt-1">Soma de todos os seus recibos pagos + as estimativas futuras.</p>
+        </div>
+        <label class="flex items-center gap-2 text-sm font-semibold text-slate-700 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+          Cotação Dólar: R$
+          <input id="fx-rate" type="number" step="0.05" min="1" value="5.80" inputmode="decimal"
+                 class="w-20 bg-slate-100 border border-slate-300 rounded px-2 py-1 text-slate-900 font-mono outline-none focus:ring-2 focus:ring-sky-500 text-right">
+        </label>
+      </div>
+
+      <!-- Resumo -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-white rounded-2xl p-6 border-l-4 border-emerald-500 shadow-sm">
+          <p class="text-xs text-slate-500 uppercase font-bold tracking-wider">Total já pago</p>
+          <p id="sum-paid" class="text-3xl font-black text-emerald-600 mt-2">R$ 0</p>
+          <p class="text-xs text-slate-500 mt-1">Passagens, Hotéis e Ingressos (BRL e USD covertido)</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border-l-4 border-amber-400 shadow-sm">
+          <p class="text-xs text-slate-500 uppercase font-bold tracking-wider">Estimativa <span id="sum-scenario-label">média</span></p>
+          <p id="sum-estimate" class="text-3xl font-black text-amber-500 mt-2">R$ 0</p>
+          <p id="sum-estimate-usd" class="text-xs text-slate-500 mt-1">US$ 0 · Comida, transporte e enxoval</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border-l-4 border-slate-700 shadow-sm">
+          <p class="text-xs text-slate-500 uppercase font-bold tracking-wider">Custo Total Previsto</p>
+          <p id="sum-total" class="text-3xl font-black text-slate-800 mt-2">R$ 0</p>
+          <p class="text-xs text-slate-500 mt-1">Soma completa do planejamento</p>
+        </div>
+      </div>
+
+      <!-- Despesas confirmadas -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-8">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
+          <h3 class="text-lg font-bold text-slate-900">Extrato de Pagamentos Confirmados</h3>
+          <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">Atualizado</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="text-xs text-slate-500 uppercase bg-slate-100/50">
+              <tr>
+                <th scope="col" class="text-left font-semibold px-6 py-3">Item</th>
+                <th scope="col" class="text-left font-semibold px-6 py-3 hidden sm:table-cell">Detalhe</th>
+                <th scope="col" class="text-right font-semibold px-6 py-3">Valor (R$)</th>
+              </tr>
+            </thead>
+            <tbody id="paid-table" class="divide-y divide-slate-100 text-slate-700"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Seletor de cenário das estimativas -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+        <h3 class="text-lg font-bold text-slate-900">Custo extra por estilo de viagem</h3>
+        <div role="radiogroup" class="inline-flex bg-slate-100 p-1 rounded-xl shadow-inner text-sm font-semibold" id="scenario-picker">
+          <button type="button" role="radio" data-scenario="eco" class="px-4 py-2 rounded-lg transition">Econômico</button>
+          <button type="button" role="radio" data-scenario="mid" class="px-4 py-2 rounded-lg transition bg-white text-slate-900 shadow-sm">Intermediário</button>
+          <button type="button" role="radio" data-scenario="high" class="px-4 py-2 rounded-lg transition">Sem miséria</button>
+        </div>
+      </div>
+
+      <div id="estimate-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+    </section>
+
+    <!-- SEÇÃO: CHECKLIST INTERATIVO (SALVA LOCALMENTE) -->
+    <section id="checklist" class="pt-6">
+      <div class="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <p class="text-amber-500 text-xs font-bold tracking-widest uppercase">Controle de Preparativos</p>
+          <h2 class="text-3xl font-extrabold text-slate-900">Checklist da Viagem</h2>
+          <p class="text-slate-600 text-sm mt-1">Marque os itens prontos. O status fica salvo automaticamente no seu navegador!</p>
+        </div>
+        <div id="checklist-progress" class="text-xs font-bold text-amber-700 bg-amber-100 px-3 py-1.5 rounded-lg border border-amber-200">
+          0 itens concluídos
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="checklist-container">
+        <!-- Itens preenchidos via JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 py-10 px-4 text-center text-slate-500 text-xs mt-20">
+    <p>Roteiro de Viagem · Nova York & Orlando 2026</p>
+    <p class="mt-1 text-slate-400">Desenvolvido com Tailwind CSS · Pronto para publicação na Vercel</p>
+  </footer>
+
+  <!-- SCRIPT DO CHECKLIST INTERATIVO COM LOCALSTORAGE -->
+  <script>
+    const checklistData = [
+      { id: 'c1', cat: 'Documentos & Burocracia', text: 'Passaporte válido por mais de 6 meses (Marcelo & Valentina)' },
+      { id: 'c2', cat: 'Documentos & Burocracia', text: 'Visto Americano B1/B2 válido para ambos' },
+      { id: 'c3', cat: 'Documentos & Burocracia', text: 'Seguro viagem internacional emitido com cobertura médica' },
+      { id: 'c4', cat: 'Documentos & Burocracia', text: 'Contas globais abastecidas com dólar (Nomad / Wise)' },
+      { id: 'c5', cat: 'Transporte & Carro', text: 'Comprar passagens do AirTrain JFK no desembarque ($8,50)' },
+      { id: 'c6', cat: 'Transporte & Carro', text: 'Confirmar locação do carro na Budget (Orlando)' },
+      { id: 'c7', cat: 'Transporte & Carro', text: 'PID ou CNH brasileira válida para a locadora em Orlando' },
+      { id: 'c8', cat: 'Reservas & Ingressos', text: 'Ingressos do Summit One Vanderbilt às 15:00' },
+      { id: 'c9', cat: 'Reservas & Ingressos', text: 'Ingressos dos Parques Disney' },
+      { id: 'c10', cat: 'Reservas & Ingressos', text: 'Ingresso especial de Natal do Magic Kingdom (MVMCP 10/12)' },
+      { id: 'c11', cat: 'Reservas & Ingressos', text: 'Ingressos Universal 3 Park (Epic Universe, Studios e Islands)' },
+      { id: 'c12', cat: 'Compras & Cupons', text: 'Baixar app Simon Shopping Malls (cupons dos Outlets Premium)' },
+      { id: 'c13', cat: 'Compras & Cupons', text: 'Baixar apps Nike e Adidas e mudar região para United States' },
+      { id: 'c14', cat: 'Compras & Cupons', text: 'Cadastrar e-mail nas marcas US (Gap, Columbia, North Face, Tommy)' },
+      { id: 'c15', cat: 'Hospedagens', text: 'Confirmar Nesva Hotel e Wyndham Disney Springs' },
+      { id: 'c16', cat: 'Hospedagens', text: 'Confirmar Wingate by Wyndham Universal Studios' },
+    ];
+
+    function renderChecklist() {
+      const container = document.getElementById('checklist-container');
+      const saved = JSON.parse(localStorage.getItem('trip_checklist_status') || '{}');
+      const categories = [...new Set(checklistData.map(i => i.cat))];
+      container.innerHTML = '';
+      let totalChecked = 0;
+
+      categories.forEach(cat => {
+        const catBox = document.createElement('div');
+        catBox.className = 'bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-3';
+        const heading = document.createElement('h4');
+        heading.className = 'text-sm font-bold text-slate-800 uppercase tracking-wider border-b border-slate-100 pb-2';
+        heading.innerText = cat;
+        catBox.appendChild(heading);
+
+        const items = checklistData.filter(i => i.cat === cat);
+        items.forEach(item => {
+          const isChecked = !!saved[item.id];
+          if(isChecked) totalChecked++;
+
+          const label = document.createElement('label');
+          label.className = 'flex items-start gap-3 cursor-pointer group select-none text-sm text-slate-600 hover:text-slate-900 transition';
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.checked = isChecked;
+          checkbox.className = 'mt-0.5 rounded border-slate-300 text-amber-500 focus:ring-amber-500 h-4 w-4 cursor-pointer';
+          checkbox.onchange = () => {
+            saved[item.id] = checkbox.checked;
+            localStorage.setItem('trip_checklist_status', JSON.stringify(saved));
+            renderChecklist();
+          };
+
+          const span = document.createElement('span');
+          span.className = isChecked ? 'line-through text-slate-400' : 'text-slate-700';
+          span.innerText = item.text;
+
+          label.appendChild(checkbox);
+          label.appendChild(span);
+          catBox.appendChild(label);
+        });
+        container.appendChild(catBox);
+      });
+      document.getElementById('checklist-progress').innerText = `${totalChecked} de ${checklistData.length} itens concluídos`;
+    }
+    renderChecklist();
+  </script>
+
+  <!-- SCRIPT GERAL PARA DESPESAS E CÁLCULOS -->
+  <script>
+    (function () {
+      const paidItems = [
+        { item: 'Voos GIG → JFK (GOL/AA)', detail: 'Casal · 30/11', brl: 5315.20 },
+        { item: 'Voo LGA → MCO (AA 3123)', detail: 'Emitido (49.200 pts Livelo)', brl: 0, note: 'Pontos' },
+        { item: 'Voos SFB → GRU (AraJet)', detail: 'Casal · Inclusa bagagem', brl: 4299.05 },
+        { item: 'Hotel Nesva NYC', detail: '4 diárias pagas', brl: 3467.13 },
+        { item: 'Wyndham Disney Springs', detail: '5 diárias pagas', brl: 3833.00 },
+        { item: 'Wingate Universal Studios', detail: '5 diárias pagas', brl: 2824.00 },
+        { item: 'Aluguel Carro Budget', detail: '2 dias em Orlando', usd: 96.90 },
+        { item: 'Ingressos Universal 3-Park', detail: 'Epic + Studios + Islands', usd: 840.00 },
+        { item: 'Mickey Christmas Party', detail: 'Festa no MK (10/12)', usd: 378.00 },
+        { item: 'Ingressos Summit One', detail: 'Acesso às 15:00', usd: 96.00 },
+        { item: 'Museu de Hist. Natural', detail: 'Acesso às 10:00', usd: 74.00 }
+      ];
+
+      const scenarios = { eco: { label: 'econômica' }, mid: { label: 'média' }, high: { label: 'gastando muito' } };
+      const categories = [
+        {
+          id: 'food', title: 'Alimentação', subtitle: '4 dias NYC + 10 dias FL',
+          items: [
+            { name: 'Refeições NYC (4 dias)', eco: 280, mid: 640, high: 1200, hint: { eco: 'Food trucks e deli', mid: 'Restaurantes casuais e café', high: 'Restaurantes premium' } },
+            { name: 'Refeições Parques Disney', eco: 200, mid: 400, high: 720, hint: { eco: 'Lanches na mochila', mid: 'Quick Service e snacks', high: 'Table Service' } },
+            { name: 'Refeições Geral FL (7 d)', eco: 315, mid: 600, high: 1000, hint: { eco: 'Walmart e Fast food', mid: 'Cheesecake Factory etc', high: 'Restaurantes caros' } },
+          ],
+        },
+        {
+          id: 'shopping', title: 'Compras & Enxoval', subtitle: 'Estimativa para os Outlets',
+          items: [
+            { name: 'Enxoval do Bebê', eco: 0, mid: 1000, high: 1500, hint: { eco: 'Não comprar', mid: 'Carter\'s e itens base', high: 'Carrinho e completo' } },
+            { name: 'Roupas, tênis, presentes', eco: 800, mid: 1800, high: 3500, hint: { eco: 'Apenas liquidação', mid: 'Outlets premium (Nike, CK)', high: 'Marcas de luxo' } },
+            { name: 'MacBook/Eletrônicos', eco: 0, mid: 800, high: 1800, hint: { eco: 'Zero', mid: 'Best Buy (Open box) / Fone', high: 'Iphone/Mac zero' } },
+          ],
+        },
+        {
+          id: 'extras', title: 'Ingressos faltantes e Logística', subtitle: 'Hollywood e transportes',
+          items: [
+            { name: 'Ingressos EPCOT, MK, AK', eco: 0, mid: 0, high: 0, hint: { eco: 'Ingressos ganhos', mid: 'Ingressos ganhos', high: 'Ingressos ganhos' } },
+            { name: 'Hollywood Studios (Casal)', eco: 320, mid: 320, high: 320, hint: { eco: 'A comprar', mid: 'A comprar', high: 'A comprar' } },
+            { name: 'Uber e Metrô', eco: 130, mid: 200, high: 380, hint: { eco: 'Só metrô', mid: 'Metrô + Uber base', high: 'Muito Uber' } },
+            { name: 'Gasolina e pedágio', eco: 25, mid: 40, high: 60, hint: { eco: 'Básico', mid: 'Médio', high: 'Várias viagens' } },
+          ],
+        }
+      ];
+
+      const fxInput = document.getElementById('fx-rate');
+      const picker = document.getElementById('scenario-picker');
+      let current = 'mid';
+
+      const brl = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+      const brlCents = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+      const usd = (v) => 'US$ ' + v.toLocaleString('pt-BR', { maximumFractionDigits: 0 });
+      const catTotal = (cat, s) => cat.items.reduce((sum, i) => sum + i[s], 0);
+      const scenarioTotal = (s) => categories.reduce((sum, c) => sum + catTotal(c, s), 0);
+      const getFx = () => parseFloat(fxInput.value) || 5.8;
+
+      function render() {
+        const fx = getFx();
+        let totalPaidBrl = 0;
+        document.getElementById('paid-table').innerHTML = paidItems.map(i => {
+          let val = i.brl || 0;
+          if (i.usd) val = i.usd * fx;
+          totalPaidBrl += val;
+          let valDisplay = '';
+          if (i.brl) valDisplay = brlCents(i.brl);
+          else if (i.usd) valDisplay = `<span class="text-[10px] text-slate-400 block">${usd(i.usd)}</span>${brlCents(val)}`;
+          else valDisplay = i.note;
+
+          return `
+            <tr class="hover:bg-slate-50 border-b border-slate-100 last:border-0">
+              <td class="px-6 py-3 font-semibold">${i.item}<div class="text-xs text-slate-500 font-normal sm:hidden">${i.detail}</div></td>
+              <td class="px-6 py-3 text-xs hidden sm:table-cell">${i.detail}</td>
+              <td class="px-6 py-3 text-right font-mono">${valDisplay}</td>
+            </tr>
+          `;
+        }).join('') + `
+          <tr class="bg-emerald-50">
+            <td class="px-6 py-4 font-bold text-emerald-900" colspan="2">SOMA JÁ PAGA</td>
+            <td class="px-6 py-4 text-right font-mono font-bold text-emerald-700 text-lg">${brlCents(totalPaidBrl)}</td>
+          </tr>
+        `;
+
+        picker.querySelectorAll('button').forEach(btn => {
+          const active = btn.dataset.scenario === current;
+          btn.className = `px-4 py-2 rounded-lg transition text-sm font-semibold ${active ? 'bg-white text-slate-900 shadow-sm ring-1 ring-slate-200' : 'text-slate-500 hover:text-slate-700'}`;
+        });
+
+        const estUsd = scenarioTotal(current);
+        document.getElementById('sum-paid').textContent = brl(totalPaidBrl);
+        document.getElementById('sum-scenario-label').textContent = scenarios[current].label;
+        document.getElementById('sum-estimate').textContent = brl(estUsd * fx);
+        document.getElementById('sum-estimate-usd').textContent = `${usd(estUsd)} · Comida, transporte e enxoval`;
+        document.getElementById('sum-total').textContent = brl(totalPaidBrl + estUsd * fx);
+
+        document.getElementById('estimate-cards').innerHTML = categories.map(cat => {
+          const total = catTotal(cat, current);
+          return `
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h4 class="text-lg font-bold text-slate-900">${cat.title}</h4>
+              <span class="text-lg font-black text-amber-500">${usd(total)}</span>
+            </div>
+            <p class="text-xs text-slate-500 mb-5 pb-3 border-b border-slate-100">${cat.subtitle} · ${brl(total * fx)}</p>
+            <ul class="space-y-4 flex-1">
+              ${cat.items.map(i => `
+                <li class="flex items-start justify-between gap-3 text-sm">
+                  <div>
+                    <div class="text-slate-700 font-medium">${i.name}</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">${i.hint[current]}</div>
+                  </div>
+                  <span class="font-mono text-slate-500 font-semibold">${usd(i[current])}</span>
+                </li>`).join('')}
+            </ul>
+          </div>`;
+        }).join('');
+      }
+
+      picker.addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-scenario]');
+        if (!btn) return;
+        current = btn.dataset.scenario;
+        render();
+      });
+      fxInput.addEventListener('input', render);
+      render();
+    })();
+  </script>
+
+</body>
+</html>
